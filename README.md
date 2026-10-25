@@ -58,4 +58,4 @@
 
 ## Ссылка на сайт
 
-https://ВАШ_ЛОГИН.github.io/bereke-exam/
+https://github.com/kosalievulukbek5-del/bereke.git
