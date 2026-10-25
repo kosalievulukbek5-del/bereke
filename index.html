@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Береке — продуктовый магазин</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="container nav-inner">
+            <a href="#home" class="logo">🛒 БЕРЕКЕ</a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#products">Товары</a></li>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="hero">
+            <div class="container py-5 text-center">
+                <h1>Добро пожаловать в Береке!</h1>
+                <p class="lead">
+                    Свежие продукты для всей семьи
+                    по доступным ценам.
+                </p>
+                <a href="#products" class="btn btn-success btn-lg mt-3">
+                    Смотреть товары
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="container py-5">
+            <h2 class="section-title">О нашем магазине</h2>
+            <p>
+                Береке — продуктовый магазин с большим
+                выбором товаров для повседневных покупок.
+            </p>
+            <p>
+                У нас вы можете приобрести молочные продукты,
+                хлеб, мясо, крупы и многое другое.
+            </p>
+
+            <div class="advantages">
+                <div>Свежие продукты</div>
+                <div>Доступные цены</div>
+                <div>Большой ассортимент</div>
+            </div>
+        </section>
+
+        <section id="products" class="container py-5">
+            <h2 class="section-title">Наши товары</h2>
+
+            <div class="product-grid">
+
+                <article class="product-card card h-100">
+                    <img src="images/milk.jpg" class="card-img-top" alt="Молоко">
+                    <div class="card-body">
+                        <h3 class="card-title">Молоко</h3>
+                        <p class="card-text">Цена: 85 сом</p>
+                        <button type="button" class="btn btn-success details-btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card card h-100">
+                    <img src="images/bread.jpg" class="card-img-top" alt="Хлеб">
+                    <div class="card-body">
+                        <h3 class="card-title">Хлеб</h3>
+                        <p class="card-text">Цена: 30 сом</p>
+                        <button type="button" class="btn btn-success details-btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card card h-100">
+                    <img src="images/eggs.jpg" class="card-img-top" alt="Яйца">
+                    <div class="card-body">
+                        <h3 class="card-title">Яйца</h3>
+                        <p class="card-text">Цена: 17 сом
+                        </p>
+                        <button type="button" class="btn btn-success details-btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card card h-100">
+                    <img src="images/meat.jpg" class="card-img-top" alt="Мясо">
+                    <div class="card-body">
+                        <h3 class="card-title">Мясо</h3>
+                        <p class="card-text">Цена: 950 сом</p>
+                        <button type="button" class="btn btn-success details-btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card card h-100">
+                    <img src="images/rice.jpg" class="card-img-top" alt="Рис">
+                    <div class="card-body">
+                        <h3 class="card-title">Рис</h3>
+                        <p class="card-text">Цена: 120 сом</p>
+                        <button type="button" class="btn btn-success details-btn">
+                            Подробнее
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="product-info" class="mt-4" role="status"></p>
+        </section>
+
+        <section id="catalog" class="catalog-section py-5">
+            <div class="container">
+                <h2 class="section-title">Каталог товаров</h2>
+                <p class="text-center mb-4">
+                    Товары автоматически загружаются через JavaScript.
+                </p>
+
+                <div id="catalog-list" class="catalog-grid"></div>
+
+                <div class="favorite-box mt-4">
+                    <h3>Избранное</h3>
+                    <p id="favorite-result" aria-live="polite">
+                        Избранных товаров пока нет.
+                    </p>
+                    <button id="clear-favorite" type="button"
+                            class="btn btn-outline-danger">
+                        Очистить избранное
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container py-5">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+
+            <form id="contact-form" class="contact-form" novalidate>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">
+                        Ваше имя
+                    </label>
+                    <input type="text" id="name" name="name"
+                           class="form-control"
+                           placeholder="Введите ваше имя" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email"
+                           class="form-control"
+                           placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">
+                        Сообщение
+                    </label>
+                    <textarea id="message" name="message"
+                              class="form-control" rows="4"
+                              placeholder="Напишите сообщение"
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    Отправить
+                </button>
+
+                <p id="form-message" class="mt-3" role="status"
+                   aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center py-4">
+            <h3>Береке</h3>
+            <p>Продуктовый магазин для всей семьи</p>
+            <p>Бишкек, Кыргызстан</p>
+            <a href="#home">Вернуться наверх ↑</a>
+            <p class="mt-3 mb-0">
+                © 2026 Береке. Учебный проект.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

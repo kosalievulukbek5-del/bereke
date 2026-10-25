@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8faf8;
+    color: #222;
+    font-size: 16px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #166534;
+}
+
+.site-header {
+    background-color: #166534;
+    padding: 18px 0;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.logo:hover {
+    color: #bbf7d0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: bold;
+    color: #14532d;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.advantages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.advantages div {
+    background: #dcfce7;
+    border-radius: 12px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.product-grid,
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: #fafafa;
+    padding: 10px;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.product-card h3 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.product-card .btn {
+    margin-top: auto;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.btn-success {
+    background-color: #16a34a;
+    border-color: #16a34a;
+}
+
+.btn-success:hover {
+    background-color: #14532d;
+    border-color: #14532d;
+}
+
+.catalog-section {
+    background-color: #ecfdf5;
+}
+
+.favorite-box {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.favorite-box h3 {
+    font-size: 22px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+.message-success {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.message-error {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+#product-info {
+    color: #166534;
+    font-weight: bold;
+    text-align: center;
+}
+
+.site-footer {
+    background-color: #14532d;
+    color: white;
+}
+
+.site-footer a {
+    color: #bbf7d0;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .product-grid,
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .product-grid,
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 40px 12px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .advantages {
+        flex-direction: column;
+        text-align: center;
+    }
+}
